@@ -39,7 +39,7 @@ var nummer = 666
 
 // NaN
 
-var dogTail = NaN
+var dogPaw = NaN
 
 // String
 
@@ -68,4 +68,4 @@ if(a>0 || b>7) {
 
 // Write a JavaScript program that runs when both things are not true.
 
-if(!(a>0 && b>7))
+if(!(a>0 && b>7));
