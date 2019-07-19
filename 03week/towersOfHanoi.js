@@ -141,7 +141,7 @@ if (typeof describe === "function") {
 				b: [],
 				c: [4, 3, 2, 1]
 			};
-			assert.equal(resetStack(), undefined); //not sure why this comes out undefined
+			assert.equal(resetStack(), undefined);
 		});
 	});
 } else {

@@ -10,6 +10,15 @@ let jobTypes = {
 };
 
 // Your code here
+class crewMember {
+  constructor(name, job, specialSkill, ship) {
+    this.name = name;
+    this.job = job;
+    this.specialSkill = specialSkill;
+    this.ship = ship;
+  }
+}
+ const crewMember1 =  new crewMember ('Rick Martinez', 'pilot', 'chemisrty' 'null')
 
 //tests
 if (typeof describe === 'function'){
