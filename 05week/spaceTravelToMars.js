@@ -10,7 +10,7 @@ let jobTypes = {
 };
 
 // Your code here
-class crewMember {
+class CrewMember {
 	constructor(name, job, specialSkill, ship) {
 		this.name = name;
 		this.job = job;
@@ -19,7 +19,7 @@ class crewMember {
 	}
 	enterShip(ship) {
 		this.ship = ship;
-		ship.crew.push = ship; //adds crew to specific ship.
+		ship.crew.push(this); //adds crew to specific ship.
 	}
 }
 
@@ -28,18 +28,24 @@ class Ship {
 		this.name = name;
 		this.type = type;
 		this.ability = ability;
-		this.crew = []; //Should be Rick Martinez
+		this.crew = [];
+	}
+	missionStatement() {
+		if (this.crew.length > 0) {
+			return this.ability;
+		} else {
+			return "Can't perform a mission yet.";
+		}
 	}
 }
 
-const crewMember1 = new crewMember(
-	"Rick Martinez",
-	"pilot",
-	"chemisrty",
-	"null"
-);
+const crewMember1 = new CrewMember("Rick Martinez", "pilot", "chemisrty");
 
-const crewMember2 = new crewMember("Commander Lewis", "commander", "geology");
+const crewMember2 = new CrewMember("Commander Lewis", "commander", "geology");
+
+const mav = new Ship("Mars Ascent Vehicle", "MAV", "Ascend into low orbit");
+
+const hermes = new Ship("Hermes", "Main Ship", "Interplanetary Space Travel");
 
 //tests
 if (typeof describe === "function") {
